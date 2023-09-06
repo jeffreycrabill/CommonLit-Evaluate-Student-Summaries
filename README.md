@@ -1,30 +1,36 @@
-# CommonLit-Evaluate-Student-Summaries
-Automated Summary Evaluation
-The goal of this project is to automate the assessment of student-written summaries, ranging from grades 3-12. Our objective is to build a model that evaluates the quality of a summary based on its representation of the main ideas and details from the source text. Additionally, we consider the clarity, precision, and fluency of the language used.
+##Automated Summary Evaluation
+Automate the assessment of student-written summaries with a focus on summaries from grades 3-12. Our model evaluates the quality based on representation of main ideas, details from the source text, and the clarity, precision, and fluency of the language.
 
+##Table of Contents
 Project Overview
-Context
-Summary writing is a fundamental skill for learners. It not only enhances reading comprehension but is particularly beneficial for second language learners and those with learning disabilities. With that said, evaluating these summaries manually can be labor-intensive. By leveraging large language models (LLMs) and other technological advancements, we can significantly improve and streamline this evaluation process.
-
-Objective
-To develop a model adept at evaluating the quality of student-written summaries. The criteria for evaluation encompass:
-
-Representation of main ideas and details from the source text.
-Clarity, precision, and fluency of the language used.
 How to Use
+Setup
+Extracting Embeddings
+Model Training
+Evaluation
+
+<br>
+##Project Overview
+Context: Summary writing is an essential skill, crucial for enhancing reading comprehension, especially for second language learners and those with learning disabilities. Evaluating these summaries manually is time-intensive, but with the aid of large language models (LLMs) and other tech, this process can be significantly streamlined.
+
+Objective: Develop a model that evaluates student-written summaries. The model's evaluation metrics include the representation of main ideas, the quality of language used in terms of clarity, precision, and fluency.
+
+<br>
+##How to Use
 Setup
 Ensure you have Python 3.6 or newer installed.
 Install the required libraries:
-bash
-Copy code
-pip install transformers torch numpy scikit-learn
-Extracting Embeddings
-Use the get_bert_embedding function provided in the main code to extract embeddings for a given text.
-Model Training
-Split the data into training and test sets.
-Train your model using the features extracted from BERT.
-Evaluation
-This competition uses the MCRMSE (mean columnwise root mean squared error) for evaluation. The goal is to minimize this metric.
 
-Acknowledgments
-This project is part of a competition hosted by CommonLit in collaboration with the Learning Agency Lab, Vanderbilt University, and Georgia State University. We extend our gratitude to the Walton Family Foundation and Schmidt Futures for their support.
+<br>
+##Extracting Embeddings
+Utilize the get_bert_embedding function available in the main codebase to extract embeddings for any given text.
+
+<br>
+##Model Training
+Split your data into training and test subsets.
+Train the model using features derived from BERT.
+<br>
+##Evaluation
+The project uses MCRMSE (mean columnwise root mean squared error) as the primary evaluation metric. The objective is to achieve the smallest value possible for this metric.
+
+<br>
