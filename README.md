@@ -9,27 +9,27 @@ Automate the assessment of student-written summaries with a focus on summaries f
 ### Model Training
 ### Evaluation
 
-<br>
+
 ## Project Overview
 Context: Summary writing is an essential skill, crucial for enhancing reading comprehension, especially for second language learners and those with learning disabilities. Evaluating these summaries manually is time-intensive, but with the aid of large language models (LLMs) and other tech, this process can be significantly streamlined.
 
 Objective: Develop a model that evaluates student-written summaries. The model's evaluation metrics include the representation of main ideas, the quality of language used in terms of clarity, precision, and fluency.
 
-<br>
+
 ## How to Use
 Setup
 Ensure you have Python 3.6 or newer installed.
 Install the required libraries:
 
-<br>
+
 ## Extracting Embeddings
 Utilize the get_bert_embedding function available in the main codebase to extract embeddings for any given text.
 
-<br>
+
 ## Model Training
 Split your data into training and test subsets.
 Train the model using features derived from BERT.
-<br>
+
 ## Evaluation
 The project uses MCRMSE (mean columnwise root mean squared error) as the primary evaluation metric. The objective is to achieve the smallest value possible for this metric.
 
