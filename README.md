@@ -18,7 +18,7 @@ This project focuses on automating the assessment of student-written summaries, 
 To develop a model that evaluates summaries based on the representation of main ideas, clarity, precision, and fluency of language. This automation reduces the time and effort required for manual evaluation.
 
 ## Setup
-Ensure you have Python 3.6 or newer installed. Download the necessary datasets and organize them as shown:
+Ensure you have Python 3.6 or newer installed. Download the necessary datasets and organize them as shown from [https://www.kaggle.com/competitions/commonlit-evaluate-student-summaries/data]:
 - sample_submission.csv
 - prompts_train.csv
 - summaries_test.csv
