@@ -1,36 +1,65 @@
 # Automated Summary Evaluation
-Automate the assessment of student-written summaries with a focus on summaries from grades 3-12. Our model evaluates the quality based on representation of main ideas, details from the source text, and the clarity, precision, and fluency of the language.
 
 ## Table of Contents
-### Project Overview
-### How to Use
-### Setup
-### Extracting Embeddings
-### Model Training
-### Evaluation
-
+- [Project Overview](#project-overview)
+- [Setup](#setup)
+- [How to Use](#how-to-use)
+- [Data Preprocessing](#data-preprocessing)
+- [Model Training and Architecture](#model-training-and-architecture)
+- [Evaluation](#evaluation)
+- [Competition Submission](#competition-submission)
+- [Troubleshooting and FAQs](#troubleshooting-and-faqs)
+- [Contact](#contact)
 
 ## Project Overview
-Context: Summary writing is an essential skill, crucial for enhancing reading comprehension, especially for second language learners and those with learning disabilities. Evaluating these summaries manually is time-intensive, but with the aid of large language models (LLMs) and other tech, this process can be significantly streamlined.
+This project focuses on automating the assessment of student-written summaries, particularly for grades 3-12. By leveraging advanced technologies like large language models (LLMs), the tool streamlines the evaluation process, which is vital for second language learners and individuals with learning disabilities.
 
-Objective: Develop a model that evaluates student-written summaries. The model's evaluation metrics include the representation of main ideas, the quality of language used in terms of clarity, precision, and fluency.
+### Objective
+To develop a model that evaluates summaries based on the representation of main ideas, clarity, precision, and fluency of language. This automation reduces the time and effort required for manual evaluation.
 
+## Setup
+Ensure you have Python 3.6 or newer installed. Download the necessary datasets and organize them as shown:
+- sample_submission.csv
+- prompts_train.csv
+- summaries_test.csv
+- summaries_train.csv
+- prompts_test.csv
 
-## How to Use
-Setup
-Ensure you have Python 3.6 or newer installed.
 Install the required libraries:
 
+pip install numpy pandas tensorflow scikit-learn matplotlib spacy
 
-## Extracting Embeddings
-Utilize the get_bert_embedding function available in the main codebase to extract embeddings for any given text.
+## How to Use
+-Clone the repository and navigate to the project directory.
+-Install the required libraries as mentioned above.
 
 
-## Model Training
-Split your data into training and test subsets.
-Train the model using features derived from BERT.
+## Data Preprocessing
+The dataset includes student-written summaries which undergo several preprocessing steps:
+- Removing NaN values.
+- Text normalization (lowercasing, removing non-alphanumeric characters).
+- Stop-word removal using Spacy.
+
+These steps are crucial for cleaning the data and preparing it for vectorization.
+
+## Model Training and Architecture
+The project employs a neural network built with TensorFlow and Keras. The architecture includes several Dense layers with activation functions and Dropout for regularization.
+
+**Training Process:**
+- Data is split into training and test sets.
+- CountVectorizer is used for vectorizing text data.
+- The model is trained for 10 epochs with a batch size of 32.
 
 ## Evaluation
-The project uses MCRMSE (mean columnwise root mean squared error) as the primary evaluation metric. The objective is to achieve the smallest value possible for this metric.
+We use RMSE (Root Mean Squared Error) as the primary metric for evaluating the model's performance. Lower RMSE values indicate better model accuracy in predicting the quality of summaries.
 
-<br>
+## Competition Submission
+For those using this model for competition submissions:
+- Format your predictions as specified by the competition guidelines.
+- Use the trained model to predict on new, unseen data.
+
+## Troubleshooting and FAQs
+If you encounter issues, refer to this section for common problems and their solutions.
+
+## Contact
+For queries or contributions, please reach out to [jeffreycrabill@gmail.com].
